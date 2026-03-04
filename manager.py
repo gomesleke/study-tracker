@@ -12,6 +12,9 @@ def open_create():
             return json.load(file)
     except FileNotFoundError:
         return create()
+    except json.JSONDecodeError:
+        # Arquivo existe mas está vazio ou corrompido
+        return create()
 
 def save(data):
     with open("time_data.json", "w", encoding="utf-8") as file:
