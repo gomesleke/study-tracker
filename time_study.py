@@ -30,7 +30,7 @@ def list_subject():
         print(f"{i}-{subject[i]}")
 
 
-def time_count(time_sec,time_min,time_hours):
+def time_count(time_sec,time_min,time_hours): #isolamento do tempo + get valores
 
     time.sleep(1)
     time_sec+=1
@@ -46,7 +46,7 @@ def time_count(time_sec,time_min,time_hours):
     return time_sec,time_min,time_hours
 
     
-def study_count():
+def study_main(): #função principal
     time_sec=0
     time_min=0
     time_hours=0
@@ -57,7 +57,7 @@ def study_count():
 
         list_subject()
         
-        subject_study=int(input("\nAssunto: "))
+        subject_study=int(input("\nAssunto: ")) #indice
 
         print("\nCronômetro iniciado! Pressione Ctrl+C para parar.\n")
 
@@ -87,12 +87,13 @@ def study_count():
             print(f"Total estudado de '{session['subject']}': {session['hours']}h {session['minutes']}min {session['seconds']}s")
         
     else:
-        print("Erro - tente novamente")
+        input("Erro - tente novamente")
+        main()
 
 
 def main():
     show_menu()
-    study_count()
+    study_main()
 
 
 main()
