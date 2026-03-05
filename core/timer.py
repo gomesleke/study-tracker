@@ -3,7 +3,6 @@ O objetivo do timer.py é ser o cronometro da aplicação
 """
 
 import time
-import os
 from storage.json_manager import open_create,save
 
 session_study=open_create("time_data") #link com .json
