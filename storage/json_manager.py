@@ -23,3 +23,12 @@ def save(file_name,data):
     with open(_get_path(file_name), "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
     
+def remove(file_name, index):
+    data = open_create(file_name)
+
+    try:
+        removed = data.pop(index)
+        save(file_name, data)
+        print(f"Removido: {removed}")
+    except IndexError:
+        print("Índice inválido")

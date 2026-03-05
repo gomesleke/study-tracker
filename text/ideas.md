@@ -1,6 +1,6 @@
 1. Melhorias básicas (rápidas de implementar)
 
-Mostrar tempo total estudado por matéria
+*Mostrar tempo total estudado por matéria* <------- 
 
 Mostrar relatório com todas as matérias e horas totais
 

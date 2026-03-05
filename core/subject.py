@@ -2,9 +2,9 @@
 O Objetivo desse arquivo é relacionado as matérias - add, remove, tempo...
 """
 from core.timer import time_count
+from storage.json_manager import open_create,save,remove
 
-subject=[]
-
+subject=open_create("subject_data")
 
 def show_subject():
     if not subject:
@@ -19,6 +19,7 @@ def add_subject():
 
     user_add_subject=input("Adicione uma Matéria: ")
     subject.append(user_add_subject)
+    save("subject_data",subject)
 
 
 def rm_subject():
@@ -29,6 +30,8 @@ def rm_subject():
 
         user_rm_subject=int(input("Remova uma Matéria(escolha seu indice): "))
         subject.pop(user_rm_subject)
+        remove("subject_data",user_rm_subject)
+
 
     except ValueError,IndexError:
         input("Tente novamente - Pressione alguma tecla")
