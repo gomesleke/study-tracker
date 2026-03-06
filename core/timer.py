@@ -34,7 +34,7 @@ def study_main(): #função principal
     if start_time == "sim":
 
         
-        subject_study=int(input("\nAssunto: ")) #indice
+        """ subject_study=int(input("Assunto: ")) #indice """
 
         print("\nCronômetro iniciado! Pressione Ctrl+C para parar.\n")
 

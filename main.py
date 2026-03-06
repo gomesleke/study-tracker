@@ -26,7 +26,11 @@ def selection_choice():
         match index_user:
             
             case 1:
-                print("qualquer coisa")
+                clear()
+                print("============")
+                print("\nSTUDY TRACKER (CLI) - Time Study\n")
+                print("============\n")
+                main_timer()
             
             case 2:
                 print("qualquer coisa")
@@ -53,7 +57,7 @@ def selection_choice():
 
 
     
-    except ValueError,:
+    except ValueError:
         input("Erro: Tente Novamente - Pressione qualquer Tecla ")
         main()
         
