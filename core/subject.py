@@ -1,0 +1,3 @@
+"""
+Responsável pela manipulação de Disciplinas - add,rm,list ...
+"""
